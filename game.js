@@ -79,3 +79,13 @@ function checkHorizontally() {
     }
   }
 }
+
+function setWinner() {
+  let winnder = document.getElementById("winner");
+  if(board[r][c] == playerRed) {
+    winnder.innerText = "Red Wins";
+  }
+  else {
+    winnder.innerText = "Yellow Wins";
+  }
+}
