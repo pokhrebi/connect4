@@ -42,6 +42,7 @@ function setPiece() {
   let coords = this.id.split("-");
   let r = parseInt(coords[0]);
   let c = parseInt(coords[1]);
+  let turn = document.getElementById("turn");
 
   r = currColumns[c];
   if (r < 0) {
@@ -52,17 +53,19 @@ function setPiece() {
   let tile = document.getElementById(r.toString() + "-" + c.toString());
   if (currPlayer == playerRed) {
     tile.classList.add("red-piece"); 
+    turn.innerText = "Turn Red";
     currPlayer = playerYellow;
   }
   else {
     tile.classList.add("yellow-piece");
+    turn.innerText = "Turn Yellow";
     currPlayer = playerRed;
   }
   r -= 1;
   currColumns[c] = r;
 
   checkWinner();
-  resetBoard();
+
 }
 
 function checkWinner() {
