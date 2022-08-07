@@ -53,12 +53,13 @@ function setPiece() {
   let tile = document.getElementById(r.toString() + "-" + c.toString());
   if (currPlayer == playerRed) {
     tile.classList.add("red-piece"); 
-    turn.innerText = "Turn Red";
+    turn.innerText = "Turn Yellow";
     currPlayer = playerYellow;
   }
   else {
     tile.classList.add("yellow-piece");
-    turn.innerText = "Turn Yellow";
+
+    turn.innerText = "Turn Red";
     currPlayer = playerRed;
   }
   r -= 1;
@@ -131,9 +132,11 @@ function setWinner(r, c) {
   let winner = document.getElementById("winner");
   if(board[r][c] == playerRed) {
     winner.innerText = "Red Wins";
+    turn.innerText = ' ';
   }
   else {
     winner.innerText = "Yellow Wins";
+    turn.innerText = ' ';
   }
 
   gameover = true;
