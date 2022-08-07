@@ -62,6 +62,7 @@ function setPiece() {
   currColumns[c] = r;
 
   checkWinner();
+  resetBoard();
 }
 
 function checkWinner() {
