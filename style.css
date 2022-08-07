@@ -4,7 +4,7 @@ body {
 }
 #board {
   height: 540px;
-  width: 630ox;
+  width: 630px;
 
   background-color: blue;
   border: 10px solid navy;
@@ -12,4 +12,13 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+}
+
+.tile {
+  height: 80px;
+  width: 80px;
+  margin: 5px;
+
+  background-color: white;
+  border-radius: 50px;
 }

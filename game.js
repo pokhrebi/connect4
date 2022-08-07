@@ -14,7 +14,7 @@ window.onload = function() {
 
 //Create Game board
 function setGame() {
-  board [];
+  board = [];
 
   for (let r = 0; r < rows; r++) {
     let row = [];
